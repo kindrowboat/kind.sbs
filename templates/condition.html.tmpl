@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Condition.Name}} - {{.Manifest.Title}}</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>{{.Manifest.Title}}</h1>
+    <p>{{.Manifest.Description}}</p>
+    <h2>{{.Condition.Name}} {{.Condition.Emoji}}</h2>
+    <p>{{.Condition.Description}}</p>
+    <h3>Expected Behaviours</h3>
+    <ul>
+        {{range .Condition.ExpectedBehaviours}}
+        <li>{{.}}</li>
+        {{end}}
+    </ul>
+    <h3>Friendship Support</h3>
+    <ul>
+        {{range .Condition.FriendshipSupport}}
+        <li>{{.}}</li>
+        {{end}}
+    </ul>
+    <a href="/">Back to index</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -e
+
+function run_server() {
+    cd public
+    python3 -m http.server 8000 &
+    trap "kill $!" EXIT
+    cd ..
+}
+
+go run main.go
+run_server
+
+while true; do
+    inotifywait -e modify,create,delete -r ./*.go ./manifest.yaml ./templates ./assets
+    go run main.go
+done
