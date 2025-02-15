@@ -12,86 +12,78 @@ description: |
   gift you can give me is your understanding and patience. Thank you for being a
   part of my life 💞
 conditions:
-  - name: Elevated Anxiety
+  - name: Moderate Anxiety
     emoji: 😨🟠
     description: |
-      I am experiencing elevated anxiety symptoms. It be focused one something, but more often than not
-      it's generalised anxiety (glomming on to anything). I may be having trouble leaving the house
-      or engaging in social activities (including texting/chatting). I'm likely experiencing some physical
-      pain or discomfort.
+      Moderate Anxiety symptoms reported out of the Stef Co-op system, inhibiting outgoing
+      communication. System is experiencing physical discomfort, racing thoughts, and difficulty
+      concentrating.
     expected_behaviours:
-      - avoiding conversation (sometimes ghosting)
-      - moderate physical discomfort
-      - difficulty concentrating
-      - impaired cognitive function
-      - suicidal ideation
+      - inhibited outgoing communication
+      - changing/cancelling plans
+      - forgetfulness
+      - increased irritability
     friendship_support:
+      - understanding
+      - flexibility
       - reassurance
       - checking in
-      - flexibility in (existing) plans
-      - understanding (in case of broken plans or ghosting)
-  - name: High Anxiety
+  - name: Severe Anxiety
     emoji: 😰🔴
     description: |
-      I am experiencing very high anxiety symptoms. I'm having trouble leaving the house or engaging in
-      social activities (including texting/chatting). I'm experiencing physical pain and discomfort. I
-      am dissociating as a coping mechanism. I may be having panic attacks. In very severe cases, I may
-      be suicidal and need hospitalisation.
+      Severe anxiety symptoms reported out of the Stef Co-op system, blocking
+      most outgoing communication.  System is experiencing severe physical
+      discomfort, racing thoughts, panic, and impaired cognitive function.
     expected_behaviours:
-      - avoiding all social interaction (ghosting)
-      - severe physical discomfort
-      - inability to concentrating
-      - severely impaired cognitive function
+      - avoiding social interaction
+      - cancelling plans / ghosting
+      - severe forgetfulness
       - panic attacks
-      - strong suicidal ideation (leading to hospitalisation)
     friendship_support:
+      - understanding
+      - flexibility
       - reassurance
       - checking in
-      - flexibility in (existing) plans
-      - understanding (in case of broken plans or ghosting)
-      - offering to help with tasks
-      - caretaking (close friends & partners)
-  - name: Elevated Depression
+      - touching base with partner (if concerned)
+  - name: Moderate Depression
     emoji: 😞🟠
     description: |
-      I am experiencing elevated depression symptoms. I may be feeling sad, hopeless, or numb. I may be
-      having trouble leaving the house or engaging in social activities (including texting/chatting). I
-      likely have some suicidal ideation.
+      System is experiencing moderate depression symptoms, inhibiting outgoing communication. System is
+      experiencing sadness, hopelessness, low energy, and difficulty concentrating.
     expected_behaviours:
-      - avoiding conversation (sometimes ghosting)
-      - dissociation (binge-watching, gaming, etc.)
-      - cognitive blunting
-      - suicidal ideation
+      - inhibited outgoing communication
+      - changing/cancelling plans
+      - forgetfulness
+      - emptiness
     friendship_support:
+      - understanding
+      - flexibility
       - reassurance
       - checking in
-      - flexibility in (existing) plans
-      - understanding (in case of broken plans or ghosting)
-  - name: High Depression
+  - name: Severe Depression
     emoji: 😔🔴
     description: |
-      I am experiencing very high depression symptoms. I'm feeling sad, hopeless, or numb. I'm having
-      trouble leaving the house or engaging in social activities (including texting/chatting). I may be
-      having suicidal ideation (with plans) and need hospitalisation.
+      System is experiencing severe depression symptoms, blocking most outgoing
+      communication. System is experiencing severe sadness, hopelessness, low 
+      energy, and difficulty concentrating.
     expected_behaviours:
-      - avoiding all social interaction (ghosting)
-      - cognitive blunting
-      - severe suicidal ideation (leading to hospitalisation)
+      - no social interaction
+      - ghosting
+      - severe forgetfulness
+      - despair
     friendship_support:
+      - understanding
+      - flexibility
       - reassurance
       - checking in
-      - flexibility in (existing) plans
-      - understanding (in case of broken plans or ghosting)
-      - offering to help with tasks
-      - caretaking (close friends & partners)
+      - touching base with partner (if concerned)
   - name: Hypomania
     emoji: ⚡
     description: |
-      I am experiencing hypomanic symptoms. I may be feeling euphoric, energetic, or irritable. I may be
-      having trouble sleeping. I may be engaging in risky behaviours. I may be experiencing racing
-      thoughts or pressured speech.
+      System is experiencing hypomanic symptoms. System is experiencing unusually elevated mood,
+      increased energy, racing thoughts, and increased impulsivity.
     expected_behaviours:
-      - talking a lot
+      - pressured speech
       - impulsivity
       - irritability
       - risky behaviours
@@ -100,3 +92,4 @@ conditions:
       - setting boundaries
       - checking in
       - low-key activities
+      - touching base with partner (if concerned)

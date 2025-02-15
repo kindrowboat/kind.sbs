@@ -76,3 +76,31 @@ p {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.psa, .psa * {
+    all: unset;
+    display: revert;
+}
+
+.psa {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20pt;
+    background-color: lightgray;
+    max-width: 1000px;
+    padding: 1em;
+}
+
+.psa h2 {
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.psa h2.emoji-banner {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+.psa ul {
+    list-style-type: none;
+}

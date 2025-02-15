@@ -6,6 +6,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/russross/blackfriday/v2"
 	"gopkg.in/yaml.v2"
@@ -40,7 +41,9 @@ func main() {
 
 	// Create a new template and register the MarkdownToHTML function
 	funcMap := template.FuncMap{
-		"MarkdownToHTML": markdownToHTML,
+		"MarkdownToHTML":   markdownToHTML,
+		"repeatEmojiUntil": repeatEmojiUntil,
+		"toUpper":          toUpper,
 	}
 	tmpl := template.Must(template.New("").Funcs(funcMap).ParseFiles(
 		"templates/index.html.tmpl",
@@ -132,4 +135,20 @@ func copyFile(src, dst string) (int64, error) {
 
 func markdownToHTML(md string) template.HTML {
 	return template.HTML(blackfriday.Run([]byte(md)))
+}
+
+func repeatEmojiUntil(num int, emoji string) string {
+	var runesOut []rune
+	srcRunes := []rune(emoji)
+	for len(runesOut) < num {
+		runesOut = append(runesOut, srcRunes...)
+	}
+	if len(runesOut) > num {
+		runesOut = runesOut[:num]
+	}
+	return string(runesOut)
+}
+
+func toUpper(s string) string {
+	return strings.ToUpper(s)
 }

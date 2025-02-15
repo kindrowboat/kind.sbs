@@ -9,20 +9,33 @@
 <body>
     <h1>{{.Manifest.Title}}</h1>
     {{.Manifest.Description | MarkdownToHTML }}
-    <h2>{{.Condition.Name}} {{.Condition.Emoji}}</h2>
-    {{.Condition.Description | MarkdownToHTML}}
-    <h3>Expected Behaviours</h3>
-    <ul>
-        {{range .Condition.ExpectedBehaviours}}
-        <li>{{.}}</li>
-        {{end}}
-    </ul>
-    <h3>Friendship Support</h3>
-    <ul>
-        {{range .Condition.FriendshipSupport}}
-        <li>{{.}}</li>
-        {{end}}
-    </ul>
-    <a href="/">Back to index</a>
+
+    <div class="psa">
+        <h2 class="emoji-banner">{{repeatEmojiUntil 40 .Condition.Emoji}}</h2>
+
+        <h2>INFORMATION - MENTAL HEALTH ADVISORY</h2>
+        <p>KIND.SBS MENTAL WEATHER SERVICE</p>
+        <p>0000 XX XXX XXX XXX 00 0000</p>
+
+        <h2>...{{ toUpper .Condition.Name}} ADVISORY IN EFFECT...</h2>
+
+        <div>{{.Condition.Description | toUpper | MarkdownToHTML}}</div>
+
+        <h2>...EXPECTED BEHAVIOUR CONDITIONS</h2>
+        <ul>
+            {{range .Condition.ExpectedBehaviours}}
+            <li>{{. | toUpper}}</li>
+            {{end}}
+        </ul>
+
+        <h2>...RECOMMENDED SUPPORT</h2>
+        <ul>
+            {{range .Condition.FriendshipSupport}}
+            <li>{{. | toUpper}}</li>
+            {{end}}
+        </ul>
+
+        <p>&nbsp;</p><p>&amp;&amp;</p><p>&nbsp;</p><p>$$</p>
+    </div>
 </body>
 </html>
