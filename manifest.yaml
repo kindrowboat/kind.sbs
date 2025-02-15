@@ -12,6 +12,20 @@ description: |
   gift you can give me is your understanding and patience. Thank you for being a
   part of my life 💞
 conditions:
+  - name: Test Signal
+    emoji: 🚦
+    description: |
+      This is a test signal of the kind.sbs system. There is no mental health
+      advisory in effect.  This is only a test.
+    expected_behaviours:
+      - communications within normal tolerances
+      - goofy antics
+      - sticking to the bit
+    friendship_support:
+      - kind words
+      - fun chats
+      - fun hangs
+      - adventures
   - name: Moderate Anxiety
     emoji: 😨🟠
     description: |
