@@ -7,6 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/russross/blackfriday/v2"
 	"gopkg.in/yaml.v2"
 )
 
@@ -37,8 +38,11 @@ func main() {
 		log.Fatalf("Failed to parse manifest.yaml: %v", err)
 	}
 
-	// Parse HTML templates
-	tmpl := template.Must(template.ParseFiles(
+	// Create a new template and register the MarkdownToHTML function
+	funcMap := template.FuncMap{
+		"MarkdownToHTML": markdownToHTML,
+	}
+	tmpl := template.Must(template.New("").Funcs(funcMap).ParseFiles(
 		"templates/index.html.tmpl",
 		"templates/condition.html.tmpl",
 	))
@@ -124,4 +128,8 @@ func copyFile(src, dst string) (int64, error) {
 
 	nBytes, err := io.Copy(destFile, sourceFile)
 	return nBytes, err
+}
+
+func markdownToHTML(md string) template.HTML {
+	return template.HTML(blackfriday.Run([]byte(md)))
 }

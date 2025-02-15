@@ -8,9 +8,9 @@
 </head>
 <body>
     <h1>{{.Manifest.Title}}</h1>
-    <p>{{.Manifest.Description}}</p>
+    {{.Manifest.Description | MarkdownToHTML }}
     <h2>{{.Condition.Name}} {{.Condition.Emoji}}</h2>
-    <p>{{.Condition.Description}}</p>
+    {{.Condition.Description | MarkdownToHTML}}
     <h3>Expected Behaviours</h3>
     <ul>
         {{range .Condition.ExpectedBehaviours}}
