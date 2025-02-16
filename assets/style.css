@@ -77,6 +77,22 @@ p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.emoji-button {
+    cursor: pointer;
+    padding: 5px 2px;
+    background-color: #ddd;
+    border-radius: 2px;
+}
+
+.emoji-button:hover {
+    background-color: #ccc;
+}
+
+.emoji-button:active {
+    background-color: #bbb;
+    transition: background-color 0.5s ease;
+}
+
 .psa, .psa * {
     all: unset;
     display: revert;

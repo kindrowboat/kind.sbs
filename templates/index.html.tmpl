@@ -10,13 +10,24 @@
     <h1>{{.Title}}</h1>
     {{ .Description | MarkdownToHTML }}
     <h2>Known Signals</h2>
-    <div><table>
+    <div>
+      <table>
         {{range .Conditions}}
-            <tr>
-              <td><a href="/{{.Emoji}}">kind.sbs/{{.Emoji}}</a></td>
-              <td>{{.Name}}</td>
-            </tr>
+        <tr>
+            <td>
+                <span class="emoji-button" onclick="copyURL('https://kind.sbs/{{.Emoji}}')">📋</span>
+                <a href="/{{.Emoji}}">kind.sbs/{{.Emoji}}</a>
+            </td>
+          <td>{{.Name}}</td>
+        </tr>
         {{end}}
-    </table></div>
+      </table>
+    </div>
+    <script>
+      function copyURL(url) {
+        navigator.clipboard.writeText(url)
+          .catch(err => console.error(err));
+      }
+    </script>
 </body>
 </html>
